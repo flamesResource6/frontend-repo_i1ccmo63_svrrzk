@@ -4,8 +4,8 @@ export default function Hero() {
   return (
     <section id="home" className="relative pt-28 sm:pt-32">
       <div className="absolute inset-0 -z-10">
+        {/* Soft light background without external image to ensure visibility everywhere */}
         <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-neutral-50" />
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=3000&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-multiply" />
       </div>
 
       <div className="mx-auto max-w-7xl px-6">
@@ -47,12 +47,19 @@ export default function Hero() {
             <div className="relative group">
               <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-amber-400/20 via-amber-300/10 to-transparent blur-2xl" />
               <div className="relative aspect-[4/3] overflow-hidden rounded-3xl ring-1 ring-neutral-200 shadow-2xl">
-                <img
-                  src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2000&auto=format&fit=crop"
-                  alt="Edler Parkettboden in modernem Interior"
-                  className="h-full w-full object-cover"
-                  loading="eager"
+                {/* Built-in elegant placeholder (no external images) */}
+                <div
+                  role="img"
+                  aria-label="Edler Parkettboden – dekoratives Platzhalterbild"
+                  className="h-full w-full"
+                  style={{
+                    backgroundImage:
+                      'linear-gradient(135deg, rgba(120,72,24,0.15) 0%, rgba(214,176,123,0.2) 35%, rgba(120,72,24,0.15) 70%), repeating-linear-gradient(90deg, rgba(120,72,24,0.25) 0px, rgba(120,72,24,0.25) 2px, rgba(214,176,123,0.15) 2px, rgba(214,176,123,0.15) 10px)',
+                    backgroundColor: '#f5f3ee',
+                    backgroundSize: 'cover',
+                  }}
                 />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-900/10 to-transparent" />
               </div>
             </div>
           </div>
